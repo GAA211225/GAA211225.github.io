@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.irontrack.app",
+      "sha256_cert_fingerprints": [
+        "C0:B2:C4:39:C8:18:33:35:5F:0D:55:37:44:FE:59:1C:FA:B0:7A:9C:1A:60:4D:CF:BB:2D:46:B6:B2:8C:3F:FD"
+      ]
+    }
+  }
+]
