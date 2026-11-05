@@ -1,29 +1,20 @@
 // ============================================================
 //  TUS DATOS — edita solo este archivo para cambiar la tarjeta.
-//  Puedes quitar o añadir elementos de las listas libremente.
+//  El frente es la imagen de tu diseño de Canva (frente.png).
 // ============================================================
 window.TARJETA = {
   nombre: "Aquiles Guzmán Alonso",
-  puesto: "Desarrollador · Emprendedor",
-  ubicacion: "México",
-  frase: "Construyo apps sencillas que resuelven problemas reales.",
-  foto: "",            // URL o ruta de una imagen (vacío = iniciales)
 
-  // Botones del frente (contacto rápido)
-  contacto: [
-    { tipo: "correo",   texto: "guzmanalonsoaquiles@gmail.com", url: "mailto:guzmanalonsoaquiles@gmail.com" },
-    { tipo: "whatsapp", texto: "WhatsApp",                      url: "https://wa.me/520000000000" },
-    { tipo: "telefono", texto: "Llamar",                        url: "tel:+520000000000" }
-  ],
+  // A dónde lleva el código QR del reverso ("Escanéame").
+  // Si cambias esto, vuelve a generar qr.svg (ver README.md).
+  qr: "https://gaa211225.github.io/tarjeta/",
 
-  // Lista de links del reverso
+  // Links del reverso (se muestran como botones redondos).
+  // tipos con ícono: correo, whatsapp, telefono, instagram, facebook, tiktok, github, linkedin, web
   links: [
-    { tipo: "github",    texto: "GitHub",    url: "https://github.com/GAA211225" },
+    { tipo: "whatsapp",  texto: "WhatsApp",  url: "https://wa.me/520000000000" },
     { tipo: "instagram", texto: "Instagram", url: "https://instagram.com/" },
-    { tipo: "linkedin",  texto: "LinkedIn",  url: "https://linkedin.com/" }
-  ],
-
-  // Colores de la tarjeta
-  color1: "#4f46e5",
-  color2: "#0ea5e9"
+    { tipo: "correo",    texto: "Correo",    url: "mailto:guzmanalonsoaquiles@gmail.com" },
+    { tipo: "github",    texto: "GitHub",    url: "https://github.com/GAA211225" }
+  ]
 };

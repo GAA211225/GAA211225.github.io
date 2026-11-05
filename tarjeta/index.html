@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tarjeta de presentación</title>
-<meta name="description" content="Tarjeta de presentación con contacto y links.">
+<title>Aquiles Guzmán Alonso · Emboobate</title>
+<meta name="description" content="Tarjeta de presentación de Aquiles Guzmán Alonso — Emboobate.">
+<meta property="og:image" content="frente.png">
 <link rel="stylesheet" href="estilo.css">
 <script src="datos.js"></script>
 </head>
@@ -13,21 +14,17 @@
   <div class="escena" id="escena">
     <div class="tarjeta" id="tarjeta" role="group" aria-label="Tarjeta de presentación">
       <section class="cara frente" aria-label="Frente">
-        <div class="avatar" id="avatar"></div>
-        <h1 id="nombre"></h1>
-        <p class="puesto" id="puesto"></p>
-        <p class="ubicacion" id="ubicacion"></p>
-        <nav class="contacto" id="contacto" aria-label="Contacto"></nav>
-        <p class="pista">Arrastra o toca la tarjeta para girarla ↻</p>
+        <img src="frente.png" alt="Emboobate — Prohibido pensarlo tanto. Aquiles Guzmán Alonso" draggable="false">
       </section>
       <section class="cara reverso" aria-label="Reverso">
-        <p class="frase" id="frase"></p>
+        <h2>ESCANÉAME</h2>
+        <img class="qr" src="qr.svg" alt="Código QR" draggable="false">
         <nav class="links" id="links" aria-label="Links"></nav>
-        <p class="pista">Arrastra o toca para volver ↻</p>
       </section>
     </div>
   </div>
-  <button class="voltear" id="voltear" type="button" aria-pressed="false">Girar tarjeta</button>
+  <button class="voltear" id="voltear" type="button" aria-pressed="false">Girar tarjeta ↻</button>
+  <p class="pista">También puedes arrastrarla hacia un lado o tocarla</p>
 </main>
 <script src="app.js"></script>
 </body>

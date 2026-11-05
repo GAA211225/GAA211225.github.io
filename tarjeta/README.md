@@ -1,8 +1,14 @@
-# Tarjeta de presentación
+# Tarjeta de presentación — Emboobate
 
-Página estática (GitHub Pages, en https://gaa211225.github.io/tarjeta/) con una tarjeta que se gira en el eje Y
-(arrastrando, tocándola o con el botón "Girar tarjeta").
+Publicada en https://gaa211225.github.io/tarjeta/
 
-- **Editar tus datos:** cambia solo `datos.js` (nombre, puesto, foto, contacto, links y colores).
-- **Quién puede editar:** solo quien tenga permiso de escritura en el repositorio (tú).
-  Los visitantes solo ven la página y usan los links.
+- **Frente:** `frente.png`, exportado del diseño de Canva "Tarjeta de presentación - Embooba".
+  Para cambiarlo, exporta la página 1 como PNG desde Canva y reemplaza este archivo.
+- **Reverso:** "ESCANÉAME", el código QR (`qr.svg`) y los botones de links.
+- **Links:** se editan en `datos.js`.
+- **Girar:** arrastrando hacia un lado, tocando la tarjeta (fuera de un link) o con el botón.
+- Solo quien tiene permiso de escritura en este repositorio (tú) puede cambiarla;
+  los visitantes solo la ven y usan los links.
+
+Para que el QR lleve a otra dirección, genera un SVG nuevo (por ejemplo en
+cualquier generador de QR) y guárdalo como `qr.svg`.

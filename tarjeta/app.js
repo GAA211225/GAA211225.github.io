@@ -3,6 +3,8 @@
   var $ = function (id) { return document.getElementById(id); };
 
   var ICONOS = {
+    facebook: '<path d="M14 8V6.5c0-.7.2-1.1 1.2-1.1H17V2.2C16.6 2.1 15.5 2 14.3 2 11.7 2 10 3.6 10 6.4V8H7v3.6h3V22h4V11.6h2.9l.5-3.6z"/>',
+    tiktok: '<path d="M16.6 2h-3.4v13.4a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9.1a6.4 6.4 0 1 0 5.4 6.3V8.6a7.8 7.8 0 0 0 4.4 1.4V6.6a4.5 4.5 0 0 1-4.4-4.6z"/>',
     correo: '<path d="M2 5h20v14H2zm2 2v.5l8 5 8-5V7l-8 5z"/>',
     telefono: '<path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/>',
     whatsapp: '<path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 .9c.3.1.5.2.5.3.1.2.1.6-.1 1.2z"/>',
@@ -14,34 +16,13 @@
 
   function boton(item) {
     var a = document.createElement('a');
-    a.className = 'btn';
     a.href = item.url;
+    a.title = item.texto;
+    a.setAttribute('aria-label', item.texto);
     if (/^https?:/i.test(item.url)) { a.target = '_blank'; a.rel = 'noopener noreferrer'; }
-    var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    svg.setAttribute('viewBox', '0 0 24 24');
-    svg.setAttribute('aria-hidden', 'true');
-    svg.innerHTML = ICONOS[item.tipo] || ICONOS.web;
-    var s = document.createElement('span');
-    s.textContent = item.texto;
-    a.appendChild(svg); a.appendChild(s);
+    a.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true">' + (ICONOS[item.tipo] || ICONOS.web) + '</svg>';
     return a;
   }
-
-  // ---- Rellenar con los datos ----
-  if (d.color1) document.documentElement.style.setProperty('--c1', d.color1);
-  if (d.color2) document.documentElement.style.setProperty('--c2', d.color2);
-  $('nombre').textContent = d.nombre || '';
-  $('puesto').textContent = d.puesto || '';
-  $('ubicacion').textContent = d.ubicacion ? '📍 ' + d.ubicacion : '';
-  $('frase').textContent = d.frase || '';
-  document.title = (d.nombre || 'Tarjeta') + ' · Tarjeta';
-  var av = $('avatar');
-  if (d.foto) {
-    var img = document.createElement('img'); img.src = d.foto; img.alt = d.nombre || ''; av.appendChild(img);
-  } else {
-    av.textContent = (d.nombre || '?').split(/\s+/).slice(0, 2).map(function (p) { return p[0]; }).join('').toUpperCase();
-  }
-  (d.contacto || []).forEach(function (c) { $('contacto').appendChild(boton(c)); });
   (d.links || []).forEach(function (l) { $('links').appendChild(boton(l)); });
 
   // ---- Giro en el eje Y ----
