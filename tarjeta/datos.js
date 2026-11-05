@@ -8,7 +8,7 @@ window.TARJETA = {
 
   // A dónde lleva el código QR del reverso ("Escanéame").
   // Si cambias esto, vuelve a generar qr.svg (ver README.md).
-  qr: "https://gaa211225.github.io/tarjeta/",
+  qr: "https://emboobate-cd9c1.web.app/tarjeta/",
 
   // Links del reverso (se muestran como botones redondos).
   // tipos con ícono: correo, whatsapp, telefono, instagram, facebook, tiktok, github, linkedin, web

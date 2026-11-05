@@ -1,6 +1,7 @@
 # Tarjeta de presentación — Emboobate
 
-Publicada en https://gaa211225.github.io/tarjeta/
+Publicada en https://emboobate-cd9c1.web.app/tarjeta/ (Firebase Hosting) y en https://gaa211225.github.io/tarjeta/ (GitHub Pages).
+El QR lleva a la versión de Firebase.
 
 - **Frente:** `frente.png`, exportado del diseño de Canva "Tarjeta de presentación - Embooba".
   Para cambiarlo, exporta la página 1 como PNG desde Canva y reemplaza este archivo.
