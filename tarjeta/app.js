@@ -23,8 +23,6 @@
     a.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true">' + (ICONOS[item.tipo] || ICONOS.web) + '</svg>';
     return a;
   }
-  $('nombre').textContent = d.nombre || '';
-  $('puesto').textContent = d.puesto || '';
   (d.links || []).forEach(function (l) { $('links').appendChild(boton(l)); });
 
   // ---- Giro en el eje Y ----
