@@ -15,6 +15,7 @@ window.TARJETA = {
   links: [
     { tipo: "whatsapp", texto: "WhatsApp 55 3925 3036", url: "https://wa.me/525539253036" },
     { tipo: "telefono", texto: "Llamar 55 3925 3036",   url: "tel:+525539253036" },
+    { tipo: "instagram", texto: "Instagram @emboobate", url: "https://www.instagram.com/emboobate/" },
     { tipo: "correo",   texto: "guzmanalonsoaquiles@gmail.com", url: "mailto:guzmanalonsoaquiles@gmail.com" }
   ]
 };
