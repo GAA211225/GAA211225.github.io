@@ -8,9 +8,9 @@ body{background:var(--bg);color:var(--texto);font-family:"Helvetica Neue",Arial,
   min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px 16px}
 main{display:flex;flex-direction:column;align-items:center;gap:16px;width:100%}
 .escena{perspective:1400px;width:min(560px,100%);aspect-ratio:336/192;touch-action:pan-y;user-select:none;-webkit-user-select:none}
-.tarjeta{position:relative;width:100%;height:100%;transform-style:preserve-3d;
-  transition:transform .7s cubic-bezier(.2,.8,.2,1);cursor:grab}
-.tarjeta.arrastrando{transition:none;cursor:grabbing}
+.tarjeta{position:relative;width:100%;height:100%;transform-style:preserve-3d;will-change:transform;cursor:grab}
+.escena:active .tarjeta{cursor:grabbing}
+.escena:focus-visible{outline:3px solid var(--texto);outline-offset:6px;border-radius:16px}
 .cara{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;
   border-radius:14px;overflow:hidden;box-shadow:0 24px 50px -22px rgba(0,0,0,.55),0 2px 6px rgba(0,0,0,.12)}
 .frente{background:#fff}
@@ -26,8 +26,4 @@ main{display:flex;flex-direction:column;align-items:center;gap:16px;width:100%}
 .links a:hover{transform:scale(1.08)}
 .links a:focus-visible{outline:3px solid #fff;outline-offset:3px}
 .links svg{width:50%;height:50%;fill:currentColor}
-.voltear{font:inherit;font-weight:600;padding:10px 20px;border-radius:999px;border:1px solid var(--borde);
-  background:var(--boton);color:var(--texto);cursor:pointer}
-.voltear:focus-visible{outline:3px solid var(--texto);outline-offset:2px}
-.pista{margin:0;font-size:.8rem;color:var(--suave);text-align:center}
-@media (prefers-reduced-motion: reduce){.tarjeta{transition:none}}
+.pista{margin:0;font-size:.85rem;color:var(--suave);text-align:center}

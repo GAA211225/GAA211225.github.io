@@ -11,7 +11,7 @@
 </head>
 <body>
 <main>
-  <div class="escena" id="escena">
+  <div class="escena" id="escena" tabindex="0" aria-label="Tarjeta de presentación. Desliza o usa las flechas para girarla.">
     <div class="tarjeta" id="tarjeta" role="group" aria-label="Tarjeta de presentación">
       <section class="cara frente" aria-label="Frente">
         <img src="frente.png" alt="Emboobate — Prohibido pensarlo tanto. Aquiles Guzmán Alonso · CEO" draggable="false">
@@ -22,8 +22,7 @@
       </section>
     </div>
   </div>
-  <button class="voltear" id="voltear" type="button" aria-pressed="false">Girar tarjeta ↻</button>
-  <p class="pista">También puedes arrastrarla hacia un lado o tocarla</p>
+  <p class="pista">👆 Desliza la tarjeta con el dedo para girarla</p>
 </main>
 <script src="app.js"></script>
 </body>
