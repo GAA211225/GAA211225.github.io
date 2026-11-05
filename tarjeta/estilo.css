@@ -15,16 +15,16 @@ main{display:flex;flex-direction:column;align-items:center;gap:16px;width:100%}
   border-radius:14px;overflow:hidden;box-shadow:0 24px 50px -22px rgba(0,0,0,.55),0 2px 6px rgba(0,0,0,.12)}
 .frente{background:#fff}
 .frente img{width:100%;height:100%;object-fit:contain;display:block;pointer-events:none}
-.reverso{transform:rotateY(180deg);background:#fff;color:#000}
+.reverso{transform:rotateY(180deg);background:#000;color:#fff}
 /* Posiciones tomadas del diseño de Canva (1050 x 600) */
-.qr{position:absolute;left:64.57%;top:24%;width:29.71%;height:52%;background:#000;padding:2.2%;box-sizing:border-box}
+.qr{position:absolute;left:64.57%;top:24%;width:29.71%;height:52%;background:#fff;padding:2.2%;box-sizing:border-box}
 .qr img{width:100%;height:100%;display:block;background:#fff;pointer-events:none}
 .links{position:absolute;left:6%;width:52%;top:0;bottom:0;display:grid;grid-template-columns:repeat(2,auto);
   align-content:center;justify-content:center;gap:clamp(10px,3.4vw,22px)}
 .links a{width:clamp(40px,12vw,68px);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;
-  color:#fff;background:#000;text-decoration:none;transition:transform .15s}
+  color:#000;background:#fff;text-decoration:none;transition:transform .15s}
 .links a:hover{transform:scale(1.08)}
-.links a:focus-visible{outline:3px solid #000;outline-offset:3px}
+.links a:focus-visible{outline:3px solid #fff;outline-offset:3px}
 .links svg{width:50%;height:50%;fill:currentColor}
 .voltear{font:inherit;font-weight:600;padding:10px 20px;border-radius:999px;border:1px solid var(--borde);
   background:var(--boton);color:var(--texto);cursor:pointer}
