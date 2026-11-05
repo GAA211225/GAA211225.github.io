@@ -4,6 +4,7 @@
 // ============================================================
 window.TARJETA = {
   nombre: "Aquiles Guzmán Alonso",
+  puesto: "CEO",
 
   // A dónde lleva el código QR del reverso ("Escanéame").
   // Si cambias esto, vuelve a generar qr.svg (ver README.md).
@@ -12,9 +13,8 @@ window.TARJETA = {
   // Links del reverso (se muestran como botones redondos).
   // tipos con ícono: correo, whatsapp, telefono, instagram, facebook, tiktok, github, linkedin, web
   links: [
-    { tipo: "whatsapp",  texto: "WhatsApp",  url: "https://wa.me/520000000000" },
-    { tipo: "instagram", texto: "Instagram", url: "https://instagram.com/" },
-    { tipo: "correo",    texto: "Correo",    url: "mailto:guzmanalonsoaquiles@gmail.com" },
-    { tipo: "github",    texto: "GitHub",    url: "https://github.com/GAA211225" }
+    { tipo: "whatsapp", texto: "WhatsApp 55 3925 3036", url: "https://wa.me/525539253036" },
+    { tipo: "telefono", texto: "Llamar 55 3925 3036",   url: "tel:+525539253036" },
+    { tipo: "correo",   texto: "guzmanalonsoaquiles@gmail.com", url: "mailto:guzmanalonsoaquiles@gmail.com" }
   ]
 };
